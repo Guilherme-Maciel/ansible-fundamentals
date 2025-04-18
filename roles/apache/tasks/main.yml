@@ -1,0 +1,20 @@
+---
+- name: "Instalando dependências"
+  ansible.builtin.apt:
+    pkg:
+      - apache2
+      - ghostscript
+      - libapache2-mod-php
+      - php
+      - php-bcmath
+      - php-curl
+      - php-imagick
+      - php-intl
+      - php-json
+      - php-mbstring
+      - php-mysql
+      - php-xml
+      - php-zip
+    state: latest #garantir q pacote tá instalado (present) garante ultima instalação (latest)
+    update_cache: yes #apt update
+  become: true #executa como sudo

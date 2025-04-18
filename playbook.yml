@@ -1,0 +1,9 @@
+---
+- hosts: wordpress #para todos os grupos de hosts
+  roles: 
+  - wordpress
+
+
+- hosts: mysql
+  roles:
+  - mysql

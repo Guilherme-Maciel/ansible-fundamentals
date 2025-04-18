@@ -1,0 +1,6 @@
+---
+- name: restart mysql #Só é chamado se houve modificação
+  service:
+    name: mysql
+    state: restarted
+  become: true
